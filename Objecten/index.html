@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objecten</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    document.write("<hr><h1>Oefening Objecten</h1> <br> <h4>Non-player character</h4>");
+
+    let character = {                                                           //charecter
+      name : "Scrub",
+      age : 14,
+      items_to_give : ["Gold","Silver","Iron","Dagger","Bandit shield"],        //items
+      giveItem : function(a){                                                   //giveItem
+      return ("You have received " + this.items_to_give[a]);
+      }
+      }
+      for (let key in character) {                                              //giveItem
+        if(key ==="giveItem")
+        break;
+      document.write(character[key]+" ");
+      }
+      document.write("<br>"+character.giveItem(Math.floor(Math.random()*5)));
+
+
+    document.write("<h4>Ye olden shop</h4>");
+
+    function weapon(title,physic,magic,minLevel,available){                     //Weapon stats
+      this.title = title;
+      this.physic = physic;
+      this.magic = magic;
+      this.minLevel = minLevel;
+      this.available = available;
+    }
+
+    let sword = new weapon ("Sting",10,0,5,true);                               //Weapon stats declared
+    let axe = new weapon ("Orc ward",15,0,8,true);
+    let staff = new weapon ("Arcane torrent",5,15,8,false);
+    let scepter = new weapon ("Soul scepter",0,10,5,true);
+    let dagger = new weapon ("Pig sticker",5,0,2,true);
+    let mace = new weapon ("Dwarven mace",10,0,5,false);
+
+    let forSale = [sword,axe,staff,scepter,dagger,mace];                        //for sale
+    let showAvailable = function(array){
+      for (var i in array) {
+          document.write("<li>"+array[i].title+"<br>");
+      }
+    }
+    showAvailable (forSale);                                                    //for sale Available
+    let showAvailableItems = function(array){
+      for (var i in array) {
+        if (array[i].available)
+          document.write("<li> Available: "+array[i].title+"<br>");
+      }
+    }
+    let showLevelItems = function(array){                                       //for sale Minimum Level
+      for (var i in array) {
+        if(array[i].minLevel>=5)
+          document.write("<li> Items with min lvl 5: "+array[i].title+"<br>");
+      }
+    }
+    showAvailableItems(forSale);
+    showLevelItems(forSale);
+
+    document.write("<h4>Our hero</h4>");
+
+      function Character(name,level,life,weapon){                               //character
+        this.name = name;
+        this.level = level;
+        this.life = life;
+        this.weapon = weapon;
+        this.attack = function(){
+        document.write(this.name+" Attacks with "+this.weapon.name +" for "+(weapon.damage*this.level));
+        }
+      }
+      function anotherWeapon(name, damage){
+      this.name = name;
+      this.damage = damage;
+      }
+      let anotherWeapon2 = new anotherWeapon ("a club",50);                     //goblin
+      let goblin = new Character ("Anklebiter",50,100, anotherWeapon2);
+      goblin.attack();
+    </script>
+  </body>
+</html>
