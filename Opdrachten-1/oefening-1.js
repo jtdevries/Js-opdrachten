@@ -1,4 +1,4 @@
-document.write("<h1>Oefening 1</h1>");
+document.write("<h3>Oefening 1</h3>");
 
 let x = "simpel";
 function myFunction() {

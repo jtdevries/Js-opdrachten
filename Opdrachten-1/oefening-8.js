@@ -1,4 +1,4 @@
-document.write("<h1>Oefening 8</h1>");
+document.write("<h3>Oefening 8</h3>");
 
 function myFunction8() {
   let age = +prompt("Wat is uw leeftijd?")

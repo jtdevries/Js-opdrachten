@@ -1,4 +1,4 @@
-document.write("<h1>Oefening 5</h1>");
+document.write("<h3>Oefening 5</h3>");
 
 function myFunction5() {
   let num1 = +prompt("input first number");

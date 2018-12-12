@@ -1,8 +1,8 @@
-document.write("<h1>Oefening 7</h1>");
+document.write("<h3>Oefening 7</h3>");
 
 
 function myFunction7() {
-  let hairLength = +prompt("Wat is uw haar lengte?");
+  let length = +prompt("Wat is uw haar lengte?");
   let dateOfBirth = +prompt("Wat is uw geboorte jaar?");
-  alert ((hairLength*2)+5*50-dateOfBirth+1766)
+  alert ((length*2)+5*50-dateOfBirth+1766)
 }
