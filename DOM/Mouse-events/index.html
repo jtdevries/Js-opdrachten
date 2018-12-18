@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+  <body>
+
+<!--onmouseover="hoverMe(this)"-->
+
+    <div class="hoverMe" onmouseover="hoverMe(this)">hide</div>
+    <div class="hoverMe" onmouseover="hoverMe(this)">hide</div>
+    <div class="hoverMe" onmouseover="hoverMe(this)">hide</div>
+    <div id="reset" onclick="reset(this)">show</div>
+
+    <div id="x-axis" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+    <div id="y-axis" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
